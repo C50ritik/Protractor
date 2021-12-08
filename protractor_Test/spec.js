@@ -2,6 +2,7 @@ const { browser, element } = require("protractor");
 describe("Final Exam", function () {
   beforeEach(function () {
     browser.get("http://juliemr.github.io/protractor-demo/");
+    browser.manage().window().maximize();
   });
   it("Title Testing", function () {
     expect(browser.getTitle()).toEqual("Super Calculator");
@@ -17,3 +18,6 @@ describe("Final Exam", function () {
     browser.driver.sleep(4000);
   });
 });
+
+// browser.manage().timeouts().implicitlyWait(3000)   implicit wait
+//
